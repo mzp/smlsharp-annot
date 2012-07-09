@@ -69,6 +69,7 @@ _require "../../../config/main/Config.smi"
 _require "TOP.sig"
 _require "TopData.ppg.smi"
 _require "NameEvalEnvUtils.smi"
+_require "Annot.smi"
 
 structure Top =
 struct

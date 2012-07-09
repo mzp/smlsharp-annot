@@ -651,7 +651,17 @@ struct
         val (typeinfVarE, tpcalc) = 
             doTypeInference idcalc handle exn => raise exn
 
-        val nameevalTopEnv = 
+        val _ =
+            case baseName of
+              SOME x =>
+                if ! Control.annot then
+                    Annot.dump (Filename.toString (Filename.replaceSuffix "annot" x)) tpcalc
+                else
+                    ()
+            | NONE =>
+                ()
+
+        val nameevalTopEnv =
             if !Control.interactiveMode
             then NameEvalEnvUtils.mergeTypeEnv (nameevalTopEnv, typeinfVarE)
             else nameevalTopEnv

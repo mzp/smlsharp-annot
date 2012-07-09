@@ -1,0 +1,10 @@
+_require "../../../basis.smi"
+_require "../../control/main/Loc.ppg.smi"
+_require "../../typedcalc/main/TypedCalc.ppg.smi"
+_require "../../types/main/Types.ppg.smi"
+_require "../../../compiler-utils/env/main/LabelEnv.smi"
+
+structure Annot =
+struct
+  val dump : string -> TypedCalc.tpdecl list -> unit
+end

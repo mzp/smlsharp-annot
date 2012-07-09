@@ -141,6 +141,7 @@ struct
   val secondLinePrompt : string ref
   val skipShebang : bool ref
   val newRBU : bool ref
+  val annot : bool ref
   val switchTable : switchTable
   val switchToString : switch -> string
   val interpretControlOption : string * switch * string ->  unit

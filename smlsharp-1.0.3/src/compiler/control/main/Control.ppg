@@ -320,6 +320,8 @@ struct
    * file. *)
   val skipShebang = ref true
 
+  val annot = ref false
+
   (****************************************)
 
   (* MEMO: procedure to generate switches list.
@@ -428,7 +430,8 @@ struct
     ("VMHeapSize", IntSwitch VMHeapSize),
     ("VMStackSize", IntSwitch VMStackSize),
     ("withoutLink", BoolSwitch withoutLink),
-    ("insertCheckGC", BoolSwitch insertCheckGC)
+    ("insertCheckGC", BoolSwitch insertCheckGC),
+    ("annot", BoolSwitch annot)
           ]
 
   (****************************************)
