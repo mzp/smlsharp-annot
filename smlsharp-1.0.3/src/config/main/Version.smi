@@ -1,0 +1,11 @@
+structure SMLSharp_Version =
+struct
+
+  val Version : string
+  val ReleaseDate : string
+  val DefaultSystemBaseDir : string
+
+  datatype os = Windows | Unix
+  val HostOS : os ref
+
+end

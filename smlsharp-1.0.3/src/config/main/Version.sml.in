@@ -1,0 +1,28 @@
+(* -*- sml -*- *)
+(**
+ * version information and default settings
+ *
+ * @copyright (c) 2012, Tohoku University.
+ * @author UENO Katsuhiro
+ *)
+
+structure SMLSharp_Version : sig
+
+  val Version : string
+  val ReleaseDate : string
+  val DefaultSystemBaseDir : string
+
+  datatype os = Windows | Unix
+  val HostOS : os ref  (* overwritable *)
+
+end =
+struct
+
+  val Version = "%VERSION%"
+  val ReleaseDate = "%RELEASE_DATE%"
+  val DefaultSystemBaseDir = "%LIBDIR_SMLSHARP%"
+
+  datatype os = Windows | Unix
+  val HostOS = ref %HOST_OS%
+
+end

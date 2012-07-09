@@ -1,0 +1,3 @@
+val x = [fn, fn] : ['a#{a: 'b,b: 'b},'b.('a -> 'b) list]
+
+
