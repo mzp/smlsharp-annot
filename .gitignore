@@ -1,5 +1,9 @@
 # emacs
 *~
+\#*\#
+*.elc
+*.annot
+a.out
 
 # auto generated file
 *.o
